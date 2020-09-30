@@ -100,17 +100,89 @@
     background: #f9f9f9 url(https://eduberry.ru/wp-content/themes/eduberry/css/../img/i_count.svg) 20px 50% no-repeat;
     background-size: 18px;
 }
-.form-btn {
-    background-color: #fa8072;
-    color: #fff;
+
+
+.quests {
+    width: 40%;
+    margin: 0 auto;
+    background-color: rgba(244,244,244,0.5);
+    padding: 40px;
     border-radius: 25px;
-    border-color: #f85441;
-    padding: 20px;
-    font-size: 1.2rem;
-    transition: background-color 0.5s;
+    margin-top: 0;
 }
 
-.form-btn:hover {
-    background-color: #f85441;
-    color: #fff
+.questcard {
+    margin-top: 5px;
 }
+
+
+
+#map {
+    width: 100%; height: 60%; padding: 0; margin: 0;
+    position: relative;
+    margin-top: 100px;
+}
+
+.sec7-header {
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.contacts-line {
+    text-align: center;
+    margin-top: 90px;
+}
+
+.contacts-line p {
+    font-size: 1.5rem;
+}
+
+.color-pickr {
+    position: fixed;
+    background-color: rgba(0,0,0,0.8);
+    height: 240px;
+    width: 50px;
+    color: white;
+    right: 0;
+    top: 150px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .dot1 {
+  background-color: #fb968b;
+  }
+
+  .dot2 {
+      background-color: #f85441;
+  }
+
+  .dot3 {
+      background-color: #009d51;
+  }
+
+  .dot4 {
+    background-color: #5c8b15;
+}
+
+.dot5 {
+    background-color: #7395ae;
+}
+
+.dot6 {
+    background-color: #313491;
+}
+
+.dot7 {
+    background-color: #91bd24;
+}
+
+.color-pickr:hover {cursor: pointer;}

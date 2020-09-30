@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="salmon.css">
+    <link id="theme" rel="stylesheet" href="salmon.css">
     <link rel="stylesheet" href="extra.css">
 
     <title>⭐️ Бизнес ланч с доставкой заказать в офис Новороссийска</title>
@@ -16,6 +16,15 @@
 <script src="ymap.js" type="text/javascript"></script>
 
 <body>
+    <div class="color-pickr">
+        <span id="dot1" data-theme="salmon.css" class="dot dot1"></span>
+        <span id="dot2" data-theme="peach.css" class="dot dot2"></span>
+        <span id="dot3" data-theme="green1.css" class="dot dot3"></span>
+        <span id="dot4" data-theme="green2.css" class="dot dot4"></span>
+        <span id="dot7" data-theme="green3.css" class="dot dot7"></span>
+        <span id="dot5" data-theme="blue1.css" class="dot dot5"></span>
+        <span id="dot6" data-theme="blue2.css" class="dot dot6"></span>
+    </div>
 
     <div class="container">
 
@@ -54,10 +63,10 @@
         </div>
 
         <div class="d-flex flex-row justify-content-around test-menu header-two">
-            <a href="#" class="btn btn-outline-success btn-lg" id="qwe">Главная</a>
-            <a href="#" class="btn btn-outline-success btn-lg">Меню</a>
-            <a href="#" class="btn btn-outline-success btn-lg">О компании</a>
-            <a href="#" class="btn btn-outline-success btn-lg">Контакты</a>
+            <a href="#" class="header-two-button" id="qwe">Главная</a>
+            <a href="#" class="header-two-button">Меню</a>
+            <a href="#" class="header-two-button">О компании</a>
+            <a href="#" class="header-two-button">Контакты</a>
         </div>
         <hr class="style-three">
 
@@ -645,25 +654,127 @@
     </section>
 
     <section id="sec-6">
-        <h2>Часто задаваемые вопросы</h2>
-        <ul>
-            <li>Еда доставляется холодной или горячей?</li>
-            <li>Предусмотрена ли отсрочка оплаты?</li>
-            <li>Как регламентируется время доставки заказа?</li>
-            <li>В какое время следует делать заказ?</li>
-            <li>Предусмотрено ли выполнение заказов в праздничные и выходные дни?</li>
-            <li>Как часто будет повторяться меню?</li>
-            <li>Заказ готового питания: что учесть?</li>
-            <li>В чем привлекательность услуг?</li>
-        </ul>
+        &nbsp;
+        <div class="sec6-header">Часто задаваемые вопросы</div>
+        <div class="quests">
+            
+        <div class="accordion" id="accordionExample">
+            <div class="card questcard">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Еда доставляется холодной или горячей?
+                  </button>
+                </h2>
+              </div>
+          
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    Приготовление и доставка еды в офис осуществляются в один и тот же день, а для их перевозки используются специальные термоизолированные боксы. В соответствии с требованиями клиента, доставка ланчей и ужинов производится и в горячем, и в охлажденном виде.
+                </div>
+              </div>
+            </div>
+            <div class="card questcard">
+              <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Предусмотрена ли отсрочка оплаты?
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    Такая отсрочка устанавливается в индивидуальном порядке и возможна только для постоянных клиентов.
+                </div>
+              </div>
+            </div>
+            <div class="card questcard">
+              <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Как регламентируется время доставки заказа?
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    Доставка бизнес-ланчей и комплексных обедов осуществляется не позднее чем за 15 минут до оговоренного времени.
+                </div>
+              </div>
+            </div>
+            <div class="card questcard">
+                <div class="card-header" id="heading4">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        В какое время следует делать заказ?
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
+                  <div class="card-body">
+                    Заказы на следующую неделю принимаются до 16:00 пятницы.
+                  </div>
+                </div>
+              </div>
+              <div class="card questcard">
+                <div class="card-header" id="heading5">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                        Предусмотрено ли выполнение заказов в праздничные и выходные дни?
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionExample">
+                  <div class="card-body">
+                    Да, предусмотрено. Наше производство и отдел доставки работают ежедневно
+                  </div>
+                </div>
+              </div>
+              <div class="card questcard">
+                <div class="card-header" id="heading6">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                        Как часто будет повторяться меню?
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordionExample">
+                  <div class="card-body">
+                    Полный ассортимент блюд рассчитан на 4-недельный цикл, в течение которого повторяются только наиболее востребованные из них.
+                  </div>
+                </div>
+              </div>
+              <div class="card questcard">
+                <div class="card-header" id="heading6">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                        В чем привлекательность услуг?
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordionExample">
+                  <div class="card-body">
+                    Разнообразное меню, ежедневно повара сервиса <b>Вкусно!Здорово</b> предлагают комплекс новых блюд. Не подходит питание ‑ мы готовы согласовать обеды по Вашим индивидуальным требованиям и доставить в офис. Заказывая ланчи в сервисной службе <b>Вкусно!Здорово</b>, вы получаете свежие, питательные блюда.
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+          </div>
+
+        </div>
+
     </section>
 
     <section id="sec-7">
-        <h2>Контакты</h2>
+        <div class="sec7-header"><h2>Контакты</h2></div>
         <div class="contacts-line">
-            <div>+7 (928) 256 42 43</div>
-            <div>info@vkusno-zdorovo.ru</div>
-            <div>г. Новороссийск, улица Кунникова, 47Б</div>
+            <p>+7 (928) 256 42 43</p>
+            <p>info@vkusno-zdorovo.ru</p>
+            <p>г. Новороссийск, улица Кунникова, 47Б</p>
         </div>
         <div id="map"></div>
     </section>

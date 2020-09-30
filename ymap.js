@@ -7,19 +7,19 @@ ymaps.ready(function () {
             searchControlProvider: 'yandex#search'
         }),
         myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Собственный значок метки',
-            balloonContent: 'Это красивая метка'
+            hintContent: 'Вкусно!Здорово',
+            balloonContent: 'Производство и офис компании"Вкусно!Здорово" расположены по адресу: ул. Кунникова, 47Б'
         }, {
             // Опции.
             // Необходимо указать данный тип макета.
             iconLayout: 'default#image',
             // Своё изображение иконки метки.
-            iconImageHref: 'https://static.wixstatic.com/media/bcea6e_d6f09e42e43a47368e79d5e4cb37257f~mv2_d_2725_1261_s_2.jpg/v1/fill/w_324,h_150,al_c,q_80,usm_0.66_1.00_0.01/vkusno_zdorovo%20(1).webp',
+            iconImageHref: 'img/vkusno_zdorovo.png',
             // Размеры метки.
-            iconImageSize: [100, 50],
+            iconImageSize: [18, 75],
             // Смещение левого верхнего угла иконки относительно
             // её "ножки" (точки привязки).
-            iconImageOffset: [-5, -38]
+            iconImageOffset: [8, -75]
         });
 
     

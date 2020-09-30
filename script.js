@@ -27,3 +27,8 @@ $( "#wd1-tab" ).click(function() {
   $( "#wd7-tab" ).click(function() {
     $("#sec2-h2-bot").text("Воскресенье") 
   });
+
+
+  $(".dot[data-theme]").click(function() {
+    $("head link#theme").attr("href", $(this).data("theme"));
+  });
