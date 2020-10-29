@@ -13,84 +13,6 @@
 
 
 
-
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
-        .test-header {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .test-logo {
-
-            flex: 1 1 50px;
-            margin: 5px;
-            display: grid;
-            place-items: center;
-        }
-        /* .test-logo img {padding: 10px;} */
-        .test-menu {
-flex: 3 3 150px;
-margin: 5px;
-display: grid;
-align-items: center;
-}
-.test-conts {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-}
-
-#navbar {
-    -webkit-transition: all 1s ease-out;
-        -moz-transition: all 1s ease-out;
-        -o-transition: all 1s ease-out;
-        -ms-transition: all 1s ease-out;
-        transition: all 1s ease-out;
-    background-color: #fff;
-    z-index: 9999;
-    padding: 0;
-}
-
-
-#navbar.fixed-nav-bar {
-    position: fixed;
-    top:0;
-    left:0;
-    right:0;
-    box-shadow: 0 4px 2px -2px rgba(0,0,0,.3);
-    padding: 10px;
-
-}
-
-
-
-html {
-  scroll-behavior: smooth;
-}
-
-.hidden {display:none;}
-
-
-nav .active {
-    background-color: #81a820 !important;
-    
-}
-
-.nav-link.active {
-    color: #fff;
-}
-
-nav .nav-link {
-    color: #81a820;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-    </style>
-
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
 </head>
@@ -100,10 +22,8 @@ nav .nav-link {
 
 <body data-spy="scroll" data-target="#menushka">
 
-    <div class="container">
-
         <div class="test-header" id="navbar">
-            <div class="test-logo"><a href=#><img src="img/logo.webp" height="80" id="logoz"></a></div>
+            <div class="test-logo"><a href=#><img src="img/logo.webp" id="logoz"></a></div>
             <div class="test-menu">
                 <div class="test-conts border" id="shapochka">            
                     <div class="header-one-item"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
@@ -156,7 +76,7 @@ nav .nav-link {
             </div>
                 <div class="test-menushka">
                     <nav id="menushka" class="nav nav-pills nav-fill">
-                        <a class="nav-link" href="#">Главная</a>
+                        <a class="nav-link active" id="glavnaya" href="#">Главная</a>
                         <a class="nav-link" href="#sec-2">Меню</a>
                         <a class="nav-link" href="#sec-3">Столовая</a>
                         <a class="nav-link" href="#techs">Производство</a>
@@ -174,6 +94,8 @@ nav .nav-link {
 
 
         <section id="hero">
+
+            <div class="container">
 
             <div class="row hero-content">
                 <div class="col-md-12 col-lg-6">
@@ -193,11 +115,14 @@ nav .nav-link {
                         <span>от 175₽</span></div>
                 </div>
             </div>
+
+
+            
+    </div>
         </section>
 
 
 
-    </div>
     <section id="sec-2">
 
         <h1 style="text-align: center; margin-bottom: 100px; color: white;">Пример меню на неделю</h1>
@@ -541,13 +466,14 @@ nav .nav-link {
 
     <section id="sec-3">
 
+     
 
         <div class="d-flex flex-wrap">
 
 
+   <h1 class="sec3-header">Организация столовой<br>на Вашем предприятии</h1>
 
-
-            <h1 style="text-align: justify; padding-top:100px;">Организация столовой<br>на Вашем предприятии</h1>
+            
 
             <div class="card mb-5 ml-auto" style="max-width: 840px;">
                 <div class="row no-gutters sec3-block">

@@ -37,12 +37,12 @@ body {
   #sec-6 {
     background: url(https://cdn.shortpixel.ai/client/q_glossy,ret_img/https://eduberry.ru/wp-content/themes/eduberry/css/../img/q-bg.jpg) no-repeat center/cover;
     background-attachment: fixed;
+    padding-top: 100px;
   }
   
   .sec6-header {
     margin: 0 auto;
     width: 500px;
-    margin-top: 100px;
     background-color: #81a820;
     color: white;
     padding: 20px;
@@ -261,7 +261,7 @@ body {
 
 
 
-#hero {height: 85vh;}
+#hero {height: 100vh; padding-top: 15vh;}
 
 
 
@@ -322,6 +322,8 @@ body {
   padding-right: 15%;
   height: 120vh;
   }
+
+  
   
   .sec3-h3 {
   margin-bottom: 50px;
@@ -400,3 +402,134 @@ body {
   }
   
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  body {
+    font-family: 'Roboto', sans-serif;
+}
+.test-header {
+  display: flex;
+  justify-content: center;
+}
+/* .test-logo {
+
+  flex: 1 1 50px;
+  margin: 5px;
+  display: grid;
+  place-items: center;
+} */
+
+.test-logo {
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 1.5%;
+  vertical-align: top;
+  display: inline-block;
+}
+
+#logoz {height: 80px; transform-origin: top center;}
+
+.test-menu {
+
+display: grid;
+align-items: center;
+}
+.test-conts {
+display: flex;
+justify-content: space-around;
+padding: 20px;
+}
+
+
+
+#navbar {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+background-color: #fff;
+z-index: 9999;
+padding: 0;
+
+
+
+position: fixed;
+top:0;
+left:0;
+right:0;
+box-shadow: 0 4px 2px -2px rgba(0,0,0,.3);
+
+height: 15vh;
+
+
+
+
+}
+
+#navbar.fixed-nav-bar {height: 7.5vh;
+font-size: 0.8rem;
+line-height: 1;
+}
+
+#navbar.fixed-nav-bar .test-logo { 
+  margin-top: 0.5%;
+
+  }
+/* 
+#navbar.fixed-nav-bar {
+position: fixed;
+top:0;
+left:0;
+right:0;
+box-shadow: 0 4px 2px -2px rgba(0,0,0,.3);
+
+} */
+
+#navbar.fixed-nav-bar img {
+transform: scale(0.6);
+transition: 0.5s ease transform;
+}
+
+
+
+html {
+scroll-behavior: smooth;
+}
+
+.hidden {display:none;}
+
+
+nav .active {
+background-color: #81a820 !important;
+
+}
+
+.nav-link.active {
+color: #fff;
+}
+
+nav .nav-link {
+color: #81a820;
+text-transform: uppercase;
+font-weight: bold;
+}

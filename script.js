@@ -4,16 +4,18 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   var navik = document.getElementById("navbar");
   var shapochka = document.getElementById("shapochka");
-  var logoz = document.getElementById("logoz")
+  var logoz = document.getElementById("logoz");
+  var glavnaya = document.getElementById("glavnaya");
   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
     navik.classList.add("fixed-nav-bar");
-    logoz.style.height = "50px";
+    // logoz.style.height = "50px";
     shapochka.classList.add("hidden");
   } else {
     navik.classList.remove("fixed-nav-bar");
     navik.style.padding = "0";
-    logoz.style.height = "80px";
+    // logoz.style.height = "80px";
     shapochka.classList.remove("hidden");
+    glavnaya.classList.add("active");
   }
 }
 

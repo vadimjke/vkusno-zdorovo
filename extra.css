@@ -144,3 +144,19 @@
         height: 195vh !important;
     }
   }
+
+  @media screen and (max-height: 900px) {
+    #sec-3 {
+        height: 160vh !important;
+    }
+  }
+
+
+  @media screen and (max-height: 900px) {
+    #map {
+        height: 60% !important;
+    }
+    #sec-7 {height: 70vh;}
+    #sec-6 {padding-top: 10px;}
+    #navbar.fixed-nav-bar {height: 7vh;}
+  }
