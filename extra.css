@@ -160,3 +160,33 @@
     #sec-6 {padding-top: 10px;}
     #navbar.fixed-nav-bar {height: 7vh;}
   }
+
+  @media screen and (max-height: 740px) {
+
+    p.card-text {
+        font-size: 0.9rem !important;
+    }
+
+    div.card-body.menu-card {
+        padding: 0.7rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .quests {
+        width: 80%;
+    }
+
+    #sec-4 h2 {
+        font-size: 2rem;
+    }
+    #sec-4 {
+        padding: 0;
+        height: 110vh;
+    }
+    .hero-btn {
+        font-size: 16pt;
+    }
+
+  }
