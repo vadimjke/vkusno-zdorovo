@@ -182,11 +182,12 @@
         font-size: 2rem;
     }
     #sec-4 {
-        padding: 0;
+        padding-top: 3%;
         height: 110vh;
     }
     .hero-btn {
         font-size: 16pt;
     }
+    #navbar.fixed-nav-bar .test-logo {margin: 0;}
 
   }
