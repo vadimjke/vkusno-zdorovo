@@ -161,6 +161,49 @@
     #navbar.fixed-nav-bar {height: 7vh;}
   }
 
+
+
+  /* Phone Fix */
+  .pos-f-t {position: fixed; width: 100%;}
+  .phone-menu {background-color: #f8f9fa;}
+
+
+  @media screen and (max-width: 625px) {
+    .pos-f-t {display: block; z-index: 99999999;}
+    #navbar  {display: none;}
+    }
+
+    @media screen and (max-width: 430px) {
+        #sec-2 {
+            height: 210vh !important;
+        }
+    }
+  
+    @media screen and (min-width: 625px) {
+      .pos-f-t {display: none;}
+    }
+
+@media screen and (max-width: 1074px) {
+    #shapochka {display: none;}
+    .test-logo {padding-left: 2%; padding-right: 10%;}
+}
+    
+
+/* Menu Fix */
+
+@media screen and (max-width: 1320px) {
+    
+.menu-control-l {display: none;}
+.menu-control-r {display: none;}
+.custom-nav {display: block;}
+}
+  
+  
+
+
+  /* Misha Fix */
+
+
   @media screen and (max-height: 740px) {
 
     p.card-text {
@@ -191,3 +234,40 @@
     #navbar.fixed-nav-bar .test-logo {margin: 0;}
 
   }
+
+
+
+
+
+
+
+
+
+
+
+  .progress-container {
+    width: 100%;
+    height: 5px;
+    background: #ccc;
+    position: fixed;
+    left: 0;
+    top: 7.5vh;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+  
+  /* The progress bar (scroll indicator) */
+  .progress-bar {
+    height: 5px;
+    background: #4caf50;
+    width: 0%}
+
+.s-none {
+    top: 15vh;
+}
+
+
+

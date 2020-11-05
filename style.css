@@ -61,7 +61,7 @@ body {
   margin-top: 0;
 }
 
-.btn-link {color: #000;  transition: 0.15s padding ease-out}
+.btn-link {color: #000;  transition: 0.15s padding ease-out; font-weight: bold;}
 .btn-link:hover {text-decoration: none; font-weight: bold; color: #81a820; padding-left: 5px;  transition: 0.15s padding ease-out}
 .btn-link:focus {text-decoration: none; box-shadow: 0 0 0 0.2rem rgba(129, 168, 32, 0.5);}
 
@@ -179,11 +179,7 @@ body {
     padding-top: 20px;
   }
   
-  .hero-btn {
-    font-size: 20pt;
-    margin-left: 10%;
-    margin-top: 10%;
-  }
+
   
   .hero-block {
     background-color: #81a820;
@@ -249,6 +245,10 @@ body {
   background-color: #81a820;
   color: #fff;
   border-radius: 25px;
+  font-size: 20pt;
+  margin-left: 10%;
+  margin-top: 20%;
+  padding: 20px;
   }
   .hero-btn:hover {
   background-color: #a88b20;
@@ -275,10 +275,10 @@ body {
     background: url(img/etaps-bg.jpg) no-repeat center/cover;
     background-attachment: fixed;
     height: 110vh !important;
-    padding: 3%;
+    padding: 0;
     }
     
-  #menuExampleHeader {
+  #sec-2 h3 {
     color: #fff;
     font-weight: bold;
   }
@@ -532,4 +532,34 @@ nav .nav-link {
 color: #81a820;
 text-transform: uppercase;
 font-weight: bold;
+border: 2px #fff solid;
 }
+
+.nav-link:hover {border: 2px solid #81a820;}
+
+
+.primer-menu-header {
+  background-color: rgba(0,0,0,.6);
+
+  text-align: center; margin-bottom: 100px; color: #000;
+  padding: 30px;
+  text-align: left;
+}
+
+#sec-2 h1 {color: #fff; padding-top: 7%; text-align: center;}
+
+.menu-control-l {position: relative; right: 8%; bottom: 80%; display: inline; }
+.menu-control-l a {font-size: 300%;color: #fff; background-color: #81a820;}
+.menu-control-l a:focus, .menu-control-r a:focus {outline: none !important;
+  box-shadow: none;}
+.menu-control-r {position: relative; left: 95%; bottom: 80%; display: inline;}
+.menu-control-r a {font-size: 300%; color: #fff; background-color: #81a820;}
+
+.custom-nav {color: #fff; text-align: center; font-size: 120%; display: none;}
+.custom-nav-bg {background-color: rgba(0,0,0,.6);}
+.custom-nav:hover {color: #81a820;}
+.custom-nav:focus {outline: none !important;
+  box-shadow: none;}
+
+
+.card {width: 100%;}
