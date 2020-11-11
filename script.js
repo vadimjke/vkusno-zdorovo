@@ -1,5 +1,6 @@
-
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () {
+  scrollFunction();
+};
 
 function scrollFunction() {
   var navik = document.getElementById("navbar");
@@ -7,7 +8,10 @@ function scrollFunction() {
   var logoz = document.getElementById("logoz");
   var glavnaya = document.getElementById("glavnaya");
   var bar = document.getElementById("vadikscrollbar");
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
     navik.classList.add("fixed-nav-bar");
     // logoz.style.height = "50px";
     // shapochka.classList.add("hidden");
@@ -23,39 +27,38 @@ function scrollFunction() {
     bar.classList.remove("s-block");
   }
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var height =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 }
 
+function VadikDenekFunc() {
+  var rng = document.getElementById("denek");
+  var p = document.getElementById("denek-label");
 
-$('#menuExample').on('slide.bs.carousel', function (e) {
-
-
-  var mHeader = $('#menuExampleHeader') ;
-
-  if (e.to == 0) {
-    mHeader.html("Понедельник");
+  switch (rng.value) {
+    case '1':
+      p.innerHTML = "Понедельник";
+      break;
+    case '2':
+      p.innerHTML = "Вторник";
+      break;
+    case '3':
+      p.innerHTML = "Среда";
+      break;
+    case '4':
+      p.innerHTML = "Четверг";
+      break;
+    case '5':
+      p.innerHTML = "Пятница";
+      break;
+    case '6':
+      p.innerHTML = "Суббота";
+      break;
+    case '7':
+      p.innerHTML = "Воскресенье";
+      break;
   }
-  else if (e.to == 1) {
-    mHeader.html("Вторник");
-  }
-  else if (e.to == 2) {
-    mHeader.html("Среда");
-  }
-  else if (e.to == 3) {
-    mHeader.html("Четверг");
-  }
-  else if (e.to == 4) {
-    mHeader.html("Пятница");
-  }
-  else if (e.to == 5) {
-    mHeader.html("Суббота");
-  }
-  else if (e.to == 6) {
-    mHeader.html("Воскресенье");
-  }
-  
-})
-
-
+}
