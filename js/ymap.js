@@ -28,5 +28,6 @@ ymaps.ready(function () {
         .add(myPlacemark)
 
 
-    myMap.behaviors.disable(['drag', 'scrollZoom']);
+    // myMap.behaviors.disable(['drag', 'scrollZoom']);
+    
 });

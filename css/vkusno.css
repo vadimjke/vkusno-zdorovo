@@ -45,10 +45,15 @@ nav .nav-link {
 }
 nav .nav-link:hover {
   border: 2px #81a820 solid;
+  border-radius: 5px;
 }
 nav .active {
   background-color: #81a820 !important;
   color: #fff;
+
+}
+.nav-pills .nav-link.active {
+  border-radius: 5px;
 }
 .nav-container {
   display: flex;
@@ -160,7 +165,7 @@ nav .active {
   color: #fff;
   text-decoration: none;
   padding: 2vh;
-  border-radius: 2vh;
+  border-radius: 5px;
   display: block;
   max-width: 60%;
   margin: 0 auto;
@@ -175,12 +180,14 @@ nav .active {
 
 .menu-container {
   padding-bottom: 5vh;
+  padding-top: 6vh;
 }
 
 .menu-container h1 {
   text-align: center;
   color: #fff;
   padding: 5vh;
+  margin-bottom: 7vh;
 }
 
 .menu-block {
@@ -189,28 +196,35 @@ nav .active {
   width: 90%;
   padding: 5vh;
   padding-top: 0;
-  border-radius: 10px;
+  border-radius: 5px;
+  padding-bottom: 10vh;
+  transition: all 0.5s ease-in;
 }
 .menu-card {
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease-out;
+  min-width: 30%;
+  max-width: 100%;
 }
 
-.menu-header {
-  background-color: #81a820;
-  color: #fff;
-  font-size: 3.5vh;
-  text-align: center;
 
+.menu-header {
+  background-color: #fff;
+  color: #81a820;
+  font-size: 3.5vh;
+  text-align: right;
+  padding-right: 5%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  border-bottom: 3px double #81a820;
 }
 
 .secret-select {
   border: 0;
   background-color: #81a820;
   color: #fff;
-  border-radius: 15px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -232,6 +246,10 @@ nav .active {
   padding-right: 1vw;
 }
 
+.tt {
+  font-size: 0.8rem;
+}
+
 .menu-body ul {
   list-style: none;
   padding-inline-start: 0;
@@ -241,11 +259,20 @@ nav .active {
 
 .menu-body ul li {
   padding: 10px;
+  padding-right: 20px;
 }
 
-.menu-body ul li:nth-child(2n) {
-  background-color: lightgrey;
+.menu-body ul li {
+  border-bottom: 1px solid grey;
+  transition: 0.2s ease-out all;
 }
+/* 
+.menu-body ul li:hover {
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #81a820;
+  color: #fff;
+} */
 
 .menu-cards-container {
   margin-top: 2vh;
@@ -254,7 +281,7 @@ nav .active {
   width: 100%;
   align-items: stretch;
   flex-wrap: wrap;
-  gap: 2vh;
+  gap: 6vh;
 }
 
 .menu-select {
@@ -270,7 +297,7 @@ input[type="range"]::-webkit-slider-thumb {
   border: 1px solid #000000;
   height: 36px;
   width: 16px;
-  border-radius: 3px;
+  border-radius: 5px;
   background: #fff;
   cursor: pointer;
   margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
@@ -282,7 +309,7 @@ input[type="range"]::-moz-range-thumb {
   border: 1px solid #000000;
   height: 36px;
   width: 16px;
-  border-radius: 3px;
+  border-radius: 5px;
   background: #ffffff;
   cursor: pointer;
 }
@@ -293,7 +320,7 @@ input[type="range"]::-ms-thumb {
   border: 1px solid #000000;
   height: 36px;
   width: 16px;
-  border-radius: 3px;
+  border-radius: 5px;
   background: #ffffff;
   cursor: pointer;
 }
@@ -304,7 +331,7 @@ input[type="range"]::-webkit-slider-runnable-track {
   cursor: pointer;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   background: #81a820;
-  border-radius: 1.3px;
+  border-radius: 5px;
   border: 0.2px solid #010101;
 }
 
@@ -318,7 +345,7 @@ input[type="range"]::-moz-range-track {
   cursor: pointer;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   background: #81a820;
-  border-radius: 1.3px;
+  border-radius: 5px;
   border: 0.2px solid #010101;
 }
 
@@ -334,7 +361,7 @@ input[type="range"]::-ms-track {
 input[type="range"]::-ms-fill-lower {
   background: #81a820;
   border: 0.2px solid #010101;
-  border-radius: 2.6px;
+  border-radius: 5px;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
 input[type="range"]:focus::-ms-fill-lower {
@@ -343,7 +370,7 @@ input[type="range"]:focus::-ms-fill-lower {
 input[type="range"]::-ms-fill-upper {
   background: #81a820;
   border: 0.2px solid #010101;
-  border-radius: 2.6px;
+  border-radius: 55px;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
 input[type="range"]:focus::-ms-fill-upper {
@@ -411,10 +438,12 @@ input[type="range"]:focus::-ms-fill-upper {
 #production {
   text-align: center;
   padding-top: 10vh;
+  padding-bottom: 10vh;
 }
 
 #production h1 {
   margin-bottom: 5vh;
+  padding-top: 5vh;
 }
 
 .carousel-control-next:hover {
@@ -428,6 +457,8 @@ input[type="range"]:focus::-ms-fill-upper {
   background-color: rgb(0, 0, 0, 0.7);
   left: 0;
   text-align: justify;
+  
+  border-radius: 5px;
 }
 .carousel-caption p {
   padding-left: 5%;
@@ -441,6 +472,8 @@ input[type="range"]:focus::-ms-fill-upper {
   text-align: right;
   padding-top: 5px;
   padding-bottom: 5px;
+  
+  border-radius: 5px;
 }
 
 /* ========= About Section ========= */
@@ -450,6 +483,10 @@ input[type="range"]:focus::-ms-fill-upper {
   padding-top: 10vh;
   margin-bottom: 10vh;
   background: url(../img/bg-test.png) 50% 45px no-repeat;
+}
+
+.about_header {
+  margin-top: 8vh;
 }
 
 .preim-block {
@@ -463,35 +500,39 @@ input[type="range"]:focus::-ms-fill-upper {
 }
 
 .modal-content {
-  border-radius: 25px;
+  border-radius: 5px;
 }
 
 #phone {
   width: 100%;
   padding: 5%;
   margin-top: 2%;
-  border-radius: 25px;
+  border-radius: 5px;
 }
 
 .modalSubm {
   width: 100%;
   padding: 2%;
   margin-top: 10%;
-  border-radius: 25px;
+  border-radius: 5px;
   background-color: #81a820;
   color: #fff;
   font-size: 2rem;
-  transition: ease-in 0.5s padding;
+  transition: ease-in 0.2s all;
 }
 
 .modalSubm:hover {
   color: #fff;
   background-color: green;
-  padding-left: 30%;
+  
 }
 
 .vkusno-header {
   border: 0;
+}
+
+#vkusnoModalHeader {
+  font-size: 1.5rem;
 }
 
 .modal-footer {
@@ -502,7 +543,7 @@ input[type="range"]:focus::-ms-fill-upper {
   width: 100%;
   padding: 5%;
   margin-top: 2%;
-  border-radius: 25px;
+  border-radius: 5px;
 }
 
 /* ========= FAQ Section ========= */
@@ -518,7 +559,7 @@ input[type="range"]:focus::-ms-fill-upper {
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 40px;
-  border-radius: 25px;
+  border-radius: 5px;
   margin-top: 0;
 }
 
@@ -545,7 +586,7 @@ input[type="range"]:focus::-ms-fill-upper {
   background-color: #81a820;
   color: white;
   padding: 20px;
-  border-radius: 25px 25px 0 0;
+  border-radius: 5px 5px 0 0;
   text-align: center;
   font-size: 1.8rem;
 }
@@ -580,6 +621,8 @@ input[type="range"]:focus::-ms-fill-upper {
   width: 30%;
   margin-top: 5vh;
   margin-bottom: 5vh;
+  
+  border-radius: 5px;
 }
 
 .contacts-header h1 {
@@ -590,6 +633,8 @@ input[type="range"]:focus::-ms-fill-upper {
   text-align: right;
   margin: 0;
   font-size: 1.9rem;
+  
+  border-radius: 5px;
 }
 
 #map {
@@ -605,12 +650,13 @@ input[type="range"]:focus::-ms-fill-upper {
   justify-content: space-around;
   width: 100%;
   margin: 0 auto;
-  border: 1px solid green;
+  
   align-items: center;
   font-size: 1.5rem;
   vertical-align: top;
   position: relative;
   height: 100%;
+  gap: 2%;
 }
 
 .contacts-line p {
@@ -621,10 +667,11 @@ input[type="range"]:focus::-ms-fill-upper {
 
 .contacts-line a {
   color: #81a820;
-  transition: ease-in-out all 0.5s;
+  transition: ease-in-out all 0.2s;
   width: 33%;
   text-align: center;
   height: 100%;
+  border-radius: 5px;
 }
 
 .contacts-line a:hover {
@@ -635,6 +682,16 @@ input[type="range"]:focus::-ms-fill-upper {
 
 .contacts-phone {
   font-weight: bold;
+}
+
+.contacts-addr {
+  color: #000 !important;
+  font-weight: bold;
+}
+.contacts-addr:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+  cursor: default;
 }
 
 /* VK icon */
@@ -760,6 +817,7 @@ input[type="range"]:focus::-ms-fill-upper {
     position: relative;
     bottom: 0;
     background-color: rgb(0, 0, 0, 0.9);
+    
   }
   .carousel-caption p {
     font-size: 0.9rem;
@@ -774,6 +832,9 @@ input[type="range"]:focus::-ms-fill-upper {
   #office-card {
     display: none;
   }
+  #vkusnoModalHeader {
+    font-size: 1rem;
+  }
   #premium-card {
     display: none;
   }
@@ -784,7 +845,7 @@ input[type="range"]:focus::-ms-fill-upper {
     display: block;
   }
   .menu-body ul li {
-    font-size: 100%;
+    font-size: 1rem;
   }
   .sec6-header {
     width: 300px;
@@ -857,6 +918,10 @@ input[type="range"]:focus::-ms-fill-upper {
   .pos-f-t {
     display: block;
     z-index: 99999999;
+  }
+
+  .menu-card:hover {
+    transform: none;
   }
   #navbar,
   .vk,
