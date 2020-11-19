@@ -8,23 +8,28 @@
     <!-- Style -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="vkusno.css">
+    <link rel="stylesheet" href="css/vkusno.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <!-- Yandex Map -->
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2c734594-e7e4-494c-ab60-8bdad6f68ff2"
     type="text/javascript"></script>
-<script src="ymap.js" type="text/javascript"></script>
+<script src="js/ymap.js" type="text/javascript"></script>
 
 <body data-spy="scroll" data-target="#menushka">
 
     <div class="pos-f-t">
         <div class="collapse" id="navbarToggleExternalContent">
             <div class="p-4 phone-menu">
-                <a href="#">Главная</a> / <a href="#sec-2">Меню</a> / <a href="#sec-3">Столовая</a> / <a
-                    href="#techs">Производство</a> / <a href="#sec-4">О нас</a> / <a href="#sec-7">Контакты</a>
+                <a href="#">Главная</a>
+                <a href="#menu">Меню</a>
+                <a href="#kitchen">Столовая</a>
+                <a href="#production">Производство</a>
+                <a href="#about">О нас</a>
+                <a href="#contacts">Контакты</a>
             </div>
         </div>
         <nav class="navbar  navbar-light bg-light d-flex justify-content-center">
@@ -76,7 +81,8 @@
                     <img class="img-fluid d-none d-lg-block" src="img/menu.png" data-src="img/menu.png" alt="menu">
                 </div>
                 <div id="hero-button">
-                    <a class="btn" href="#">Заказать бесплатную дегустацию</a>
+                    <a class="btn" href="#" data-toggle="modal" data-target="#vkusnoModal">Заказать бесплатную
+                        дегустацию</a>
                 </div>
             </div>
         </div>
@@ -85,7 +91,7 @@
     <!-- Пример меню на неделю -->
     <section id="menu">
         <div class="menu-container" data-parallax="scroll" data-image-src="img/etaps-bg.jpg">
-            <h1>Пример меню на неделю</h1>
+            <h1 class="animate__animated animate__fadeIn menu_header">Пример меню на неделю</h1>
             <div class="menu-block">
                 <div class="menu-select">
                     <label for="denek" id="denek-label">Понедельник</label>
@@ -150,11 +156,11 @@
     </section>
 
     <!-- Столовая -->
-    <section id="kitchen">
-        <h1>Организация столовой<br>
+    <section id="kitchen" data-parallax="scroll" data-image-src="img/plan-bg.jpg" data-speed="0.2">
+        <h1 class="kitchen_header">Организация столовой<br>
             на Вашем предприятии</h1>
         <div class="kitchen-container">
-            <div class="card" style="width: 18rem;">
+            <div class="card card1" style="width: 18rem;">
                 <img src="img/stolovaya-1.webp" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Столовая полного цикла</h5>
@@ -164,7 +170,7 @@
                         еды до обслуживания посетителей и уборки помещения</p>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;">
+            <div class="card card2" style="width: 18rem;">
                 <img src="img/stolovaya-2.webp" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Столовая раздаточного типа</h5>
@@ -175,7 +181,7 @@
                         готовые блюда, которые на месте подогреваются и сервируются</p>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;">
+            <div class="card card3" style="width: 18rem;">
                 <img src="img/stolovaya-4.webp" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Столовая доготовочного типа</h5>
@@ -188,7 +194,7 @@
 
 
         </div>
-        <a href="#" class="btn kitchen-btn">Узнать подробнее</a>
+        <a href="#" class="btn kitchen-btn" data-toggle="modal" data-target="#vkusnoModal">Узнать подробнее</a>
     </section>
 
     <!-- Доставка -->
@@ -198,8 +204,7 @@
 
     <!-- Производство -->
     <section id="production">
-        <hr>
-        <h1>Производство</h1>
+        <h1 class="production_header">Производство</h1>
         <div class="container">
 
             <div id="techsCarousel" class="carousel slide carousel-techs" data-ride="carousel">
@@ -257,8 +262,8 @@
 
     <!-- О нас -->
     <section id="about">
-        <hr style="margin-top: 15vh">
-        <h1>Наши преимущества</h1>
+        
+        <h1 class="about_header">Наши преимущества</h1>
         <div class="container">
             <div class="row preim-block">
                 <div class="col-md-6 col-xs-12">
@@ -418,21 +423,67 @@
             </div>
             <div class="social-media">
                 <div class="gram">
-                    <a href="https://www.instagram.com/vkusnozdorovo_/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/vkusnozdorovo_/" target="_blank"><i class="fa fa-instagram"
+                            aria-hidden="true"></i></a>
                 </div>
                 <div class="vk">
-                    <a href="https://vk.com/vkusnozdorovo_nvrsk" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                    <a href="https://vk.com/vkusnozdorovo_nvrsk" target="_blank"><i class="fa fa-vk"
+                            aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
 
         <div class="contacts-line">
-            <a href="#"" class="contacts-addr"><p>ул. Кунникова, 47Б</p></a>
-            <a href="tel:+79282564243"" class="contacts-phone"><p>+7 (928) 256 42 43</p></a>
-            <a href="mailto:info@vkusno-zdorovo.ru" class="contacts-mail"><p>info@vkusno-zdorovo.ru</p></a>
+            <a href="#"" class=" contacts-addr">
+                <p>ул. Кунникова, 47Б</p>
+            </a>
+            <a href="tel:+79282564243"" class=" contacts-phone">
+                <p><i class="fa fa-phone-square" aria-hidden="true"></i> 8-928-256-42-43</p>
+            </a>
+            <a href="mailto:info@vkusno-zdorovo.ru" class="contacts-mail">
+                <p>info@vkusno-zdorovo.ru</p>
+            </a>
+        </div>
+        <div class="contacts-line" id="mobile-gram">
+            <a href="https://www.instagram.com/vkusnozdorovo_/">
+                <p><i class="fa fa-instagram" aria-hidden="true"></i> vkusnozdorovo_</p>
+            </a>
         </div>
         <div id="map"></div>
     </section>
+
+
+
+
+
+
+    <!-- Modal -->
+    <div class="modal  fade" id="vkusnoModal" tabindex="-1" aria-labelledby="vkusnoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header vkusno-header">
+                    <h5 class="modal-title" id="vkusnoModalHeader">Оставьте свой контакт <br>наши менеджеры с Вами
+                        свяжутся</h5>
+                    <button type="button" class="close vkusno-close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form action="">
+                        <input id="name" required class="form-control" type="text" placeholder="Имя">
+                        <input id="phone" class="form-control" type="text" placeholder="Телефон">
+                        <input id="phone" class="form-control" type="text" placeholder="E-mail">
+                        <input type="submit" value="Отправить" class="btn modalSubm">
+                    </form>
+
+                </div>
+                <div class="modal-footer"></div>
+
+            </div>
+        </div>
+    </div>
+
 
 
 
@@ -449,8 +500,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-    <script src="parallax.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/parallax.min.js"></script>
 
 
 </body>

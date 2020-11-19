@@ -83,8 +83,22 @@ nav .active {
   position: fixed;
   width: 100%;
 }
+
+/* Phone Menu */
+
 .phone-menu {
   background-color: #f8f9fa;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+.phone-menu a {
+  border-radius: 5px;
+  padding: 6px;
+  background-color: #4caf50;
+  color: #fff;
+  text-decoration: none;
 }
 
 /* ========= Main Section ========= */
@@ -123,17 +137,18 @@ nav .active {
   height: 60px;
   padding-left: 60px;
   padding-top: 20px;
+  font-size: 1.2rem;
 }
 
 .hero-list-1 {
-  background-image: url("img/banner-icon.webp");
+  background-image: url("../img/banner-icon.webp");
 }
 
 .hero-list-2 {
-  background-image: url("img/fastfood.svg");
+  background-image: url("../img/fastfood.svg");
 }
 .hero-list-3 {
-  background-image: url("img/delivery.svg");
+  background-image: url("../img/delivery.svg");
 }
 #hero-button {
   text-align: center;
@@ -147,8 +162,8 @@ nav .active {
   padding: 2vh;
   border-radius: 2vh;
   display: block;
-  max-width: 40vw;
-  align-self: center;
+  max-width: 60%;
+  margin: 0 auto;
   font-size: calc(1vw + 1.5vh);
 }
 
@@ -349,6 +364,8 @@ input[type="range"]:focus::-ms-fill-upper {
 
 #kitchen {
   padding-top: 5vh;
+
+  padding-bottom: 5vh;
 }
 
 .kitchen-container {
@@ -385,11 +402,26 @@ input[type="range"]:focus::-ms-fill-upper {
   color: #fff;
 }
 
+.card-title {
+  font-family: Helvetica, sans-serif;
+}
+
 /* ========= Production Section ========= */
 
 #production {
   text-align: center;
-  padding-top: 5vh;
+  padding-top: 10vh;
+}
+
+#production h1 {
+  margin-bottom: 5vh;
+}
+
+.carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.carousel-control-prev:hover {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .carousel-caption {
@@ -415,19 +447,68 @@ input[type="range"]:focus::-ms-fill-upper {
 
 #about {
   text-align: center;
-  padding-top: 5vh;
+  padding-top: 10vh;
   margin-bottom: 10vh;
+  background: url(../img/bg-test.png) 50% 45px no-repeat;
 }
 
 .preim-block {
   margin-top: 80px;
 }
 
+/* Modal */
+
+#vkusnoModal {
+  margin-top: 20vh;
+}
+
+.modal-content {
+  border-radius: 25px;
+}
+
+#phone {
+  width: 100%;
+  padding: 5%;
+  margin-top: 2%;
+  border-radius: 25px;
+}
+
+.modalSubm {
+  width: 100%;
+  padding: 2%;
+  margin-top: 10%;
+  border-radius: 25px;
+  background-color: #81a820;
+  color: #fff;
+  font-size: 2rem;
+  transition: ease-in 0.5s padding;
+}
+
+.modalSubm:hover {
+  color: #fff;
+  background-color: green;
+  padding-left: 30%;
+}
+
+.vkusno-header {
+  border: 0;
+}
+
+.modal-footer {
+  border: 0;
+}
+
+#name {
+  width: 100%;
+  padding: 5%;
+  margin-top: 2%;
+  border-radius: 25px;
+}
+
 /* ========= FAQ Section ========= */
 
 #faq {
-  background: url(https://cdn.shortpixel.ai/client/q_glossy,ret_img/https://eduberry.ru/wp-content/themes/eduberry/css/../img/q-bg.jpg)
-    no-repeat center/cover;
+  background: url(../img/q-bg.jpg) no-repeat center/cover;
   background-attachment: fixed;
   padding: 100px;
 }
@@ -479,7 +560,9 @@ input[type="range"]:focus::-ms-fill-upper {
   display: flex;
 }
 
-.gram {width: 120px;}
+.gram {
+  width: 120px;
+}
 
 .social-media {
   display: flex;
@@ -528,7 +611,6 @@ input[type="range"]:focus::-ms-fill-upper {
   vertical-align: top;
   position: relative;
   height: 100%;
-
 }
 
 .contacts-line p {
@@ -543,7 +625,6 @@ input[type="range"]:focus::-ms-fill-upper {
   width: 33%;
   text-align: center;
   height: 100%;
-  
 }
 
 .contacts-line a:hover {
@@ -558,20 +639,21 @@ input[type="range"]:focus::-ms-fill-upper {
 
 /* VK icon */
 
-.vk:hover a{
-  background: #0077B5;
-  }
-  
-  .vk:hover a:before{
+.vk:hover a {
+  background: #0077b5;
+}
+
+.vk:hover a:before {
   background: #036aa0;
-  }
-  .vk:hover a:after{
+}
+.vk:hover a:after {
   background: #0d82bf;
-  }
+}
 
 /* Instagram icon */
 
-.gram a::before, .vk a::before {
+.gram a::before,
+.vk a::before {
   content: "";
   position: absolute;
   top: 10px;
@@ -582,7 +664,8 @@ input[type="range"]:focus::-ms-fill-upper {
   transition: 0.5s;
   transform: rotate(0deg) skewY(-45deg);
 }
-.gram a::after, .vk a::after {
+.gram a::after,
+.vk a::after {
   content: "";
   position: absolute;
   top: 80px;
@@ -593,7 +676,8 @@ input[type="range"]:focus::-ms-fill-upper {
   transition: 0.5s;
   transform: rotate(0deg) skewX(-45deg);
 }
-.gram a, .vk a {
+.gram a,
+.vk a {
   position: relative;
   display: block;
   width: 80px;
@@ -605,19 +689,21 @@ input[type="range"]:focus::-ms-fill-upper {
   box-shadow: -20px 20px 10px rgb(0, 0, 0, 0.5);
 }
 
-.gram a:hover, .vk a:hover {
+.gram a:hover,
+.vk a:hover {
   transform: perspective(1000px) rotate(-30deg) skew(25deg)
     translate(20px, -20px);
   box-shadow: -50px 50px 50px rgb(0, 0, 0, 0.5);
   color: #fff;
 }
 
-.gram:hover i, .vk:hover i {
+.gram:hover i,
+.vk:hover i {
   color: #fff;
-  
 }
 
-.gram, .vk {
+.gram,
+.vk {
   transform: translate(-50%, -50%);
   margin: 0;
   padding: 0;
@@ -627,7 +713,8 @@ input[type="range"]:focus::-ms-fill-upper {
   margin-left: 50px;
 }
 
-.gram .fa, .vk .fa {
+.gram .fa,
+.vk .fa {
   font-size: 40px;
   color: #000;
   line-height: 80px;
@@ -649,6 +736,10 @@ input[type="range"]:focus::-ms-fill-upper {
 }
 
 /* ========= Responsive Trash ========= */
+
+#mobile-gram {
+  display: none;
+}
 
 @media screen and (max-width: 991px) {
   h1 {
@@ -708,6 +799,11 @@ input[type="range"]:focus::-ms-fill-upper {
   .card-body {
     font-size: 90%;
   }
+  .kitchen-btn {
+    font-size: 1.5rem;
+    width: 60%;
+    left: 20%;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -762,11 +858,23 @@ input[type="range"]:focus::-ms-fill-upper {
     display: block;
     z-index: 99999999;
   }
-  #navbar, .vk, .gram, .contacts-mail, .contacts-addr {
+  #navbar,
+  .vk,
+  .gram,
+  .contacts-mail,
+  .contacts-addr,
+  .social-media {
     display: none;
   }
+  #hero-button {
+    margin: 0;
+  }
+  #mobile-gram {
+    display: block;
+  }
   #hero-button a {
-    max-width: 90%;
+    max-width: 100%;
+    font-size: 100%;
   }
   #faq {
     padding-right: 20px;
@@ -781,8 +889,19 @@ input[type="range"]:focus::-ms-fill-upper {
   .contacts-line a {
     width: 100%;
   }
+  .contacts-line p {
+    font-weight: normal;
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    color: #000;
+  }
   .contacts-line {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    vertical-align: top;
+  }
+  .contacts-line p i {
+    margin-right: 20px;
+    color: #81a820;
   }
 }
 
@@ -791,8 +910,6 @@ input[type="range"]:focus::-ms-fill-upper {
     display: none;
   }
 }
-
-
 
 @media screen and (max-width: 890px) {
   .contacts-line {
