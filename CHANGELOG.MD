@@ -1,8 +1,22 @@
 # Changelog
-All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
+
+## [1.2] - 23-11-2020
+### Changed
+- Добавил node модули body-parser и multer для обработки сообщений из формы
+- ChangeLog теперь отклоняется от конвенции [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) Все изменения в данном репозитории теперь будут под заголовком "Changed"
+- В модальном окне добавил поле "Комментарий", убрал поле "Email"
+- В модальном окне изменил расположение элементов
+- В модальном окне изменил оформление элементов формы (input:focus box-shadow)
+- Изменил box-shadow у всех кнопок в статусе focus
+- Пофиксил border-radius у фона всех заголовков
+- Убрал кнопку закрыть у модального окна
+- Стилизовал Scrollbar
+- Заменил JQuery slim на JQuery min
+- Добавил node модуль nodemailer в server.js для отправки писем
+- Сделал функцию отправки писем на почту
+- Добавил README.md
 
 ## [1.1.3] - 20-11-2020
 ### Removed

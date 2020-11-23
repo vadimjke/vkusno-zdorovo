@@ -376,8 +376,38 @@ else {
 });
 
 
-/* Подсказки в меню */
 
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
+
+
+
+
+/* AJAX отправка данных через форму */
+
+$('#knopka').click(function (event) {
+  event.preventDefault();
+  var formName = $('#name').val();
+  var formPhone = $('#phone').val();
+  var formComment = $('#comment').val();
+
+  $.ajax('/send/', {
+      type: 'POST',  // http method
+      data: { name: formName, phone: formPhone, comment: formComment },  // data to submit
+      success: function (data, status, xhr) {
+          $('#modalForm').hide();
+          $('#modal').html("Ваше сообщение успешно отправлено. Спасибо!");
+      },
+      error: function (jqXhr, textStatus, errorMessage) {
+          $('#modalForm').addClass('vkusno-hide');
+          $('#modal').html('Ошибка' + errorMessage);
+      }
+  });
+});
+
+
+
+
+/* Маска для телефона */
+var phoneMask = IMask(
+  document.getElementById('phone'), {
+    mask: '+{7}(000)000-00-00'
+  });

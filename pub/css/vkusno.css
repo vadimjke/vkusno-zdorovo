@@ -10,6 +10,33 @@ html {
   scroll-behavior: smooth;
 }
 
+.btn.focus,
+.btn:focus {
+  box-shadow: 0 0 0 0.2rem rgba(129, 168, 32, 0.5);
+}
+
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #81a820;
+  border-radius: 25px;
+}
+
+.vkusno-hide {
+  display: none;
+}
+
+.vkusno-show {
+  display: block;
+}
+
 /* ========= NavBar ========= */
 #logoz {
   max-width: 100%;
@@ -50,7 +77,6 @@ nav .nav-link:hover {
 nav .active {
   background-color: #81a820 !important;
   color: #fff;
-
 }
 .nav-pills .nav-link.active {
   border-radius: 5px;
@@ -207,7 +233,6 @@ nav .active {
   min-width: 30%;
   max-width: 100%;
 }
-
 
 .menu-header {
   background-color: #fff;
@@ -457,8 +482,8 @@ input[type="range"]:focus::-ms-fill-upper {
   background-color: rgb(0, 0, 0, 0.7);
   left: 0;
   text-align: justify;
-  
-  border-radius: 5px;
+
+  border-radius: 0 5px 5px 0;
 }
 .carousel-caption p {
   padding-left: 5%;
@@ -472,8 +497,8 @@ input[type="range"]:focus::-ms-fill-upper {
   text-align: right;
   padding-top: 5px;
   padding-bottom: 5px;
-  
-  border-radius: 5px;
+
+  border-radius: 0 5px 5px 0;
 }
 
 /* ========= About Section ========= */
@@ -495,6 +520,15 @@ input[type="range"]:focus::-ms-fill-upper {
 
 /* Modal */
 
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(129, 168, 32, 0.9);
+}
+
+.modal-dialog {
+  min-width: 30%;
+}
+
 #vkusnoModal {
   margin-top: 20vh;
 }
@@ -503,7 +537,42 @@ input[type="range"]:focus::-ms-fill-upper {
   border-radius: 5px;
 }
 
+#name {
+  border-radius: 5px;
+  grid-area: name;
+  color: #000;
+  font-weight: bold;
+}
+
 #phone {
+  border-radius: 5px;
+  grid-area: phone;
+  font-weight: bold;
+}
+
+#comment {
+  border-radius: 5px;
+  grid-area: comment;
+  min-height: 150px;
+  font-weight: bold;
+  resize: none;
+}
+
+#comment::placeholder,
+#phone::placeholder,
+#name::placeholder {
+  font-weight: normal;
+}
+
+.modal-form {
+  display: grid;
+  grid-template-areas: "name phone" "comment comment" "submit submit";
+  grid-template-columns: 40% 55%;
+  width: 100%;
+  gap: 5%;
+}
+
+#email {
   width: 100%;
   padding: 5%;
   margin-top: 2%;
@@ -513,18 +582,17 @@ input[type="range"]:focus::-ms-fill-upper {
 .modalSubm {
   width: 100%;
   padding: 2%;
-  margin-top: 10%;
   border-radius: 5px;
   background-color: #81a820;
   color: #fff;
   font-size: 2rem;
   transition: ease-in 0.2s all;
+  grid-area: submit;
 }
 
 .modalSubm:hover {
   color: #fff;
   background-color: green;
-  
 }
 
 .vkusno-header {
@@ -537,13 +605,6 @@ input[type="range"]:focus::-ms-fill-upper {
 
 .modal-footer {
   border: 0;
-}
-
-#name {
-  width: 100%;
-  padding: 5%;
-  margin-top: 2%;
-  border-radius: 5px;
 }
 
 /* ========= FAQ Section ========= */
@@ -621,8 +682,7 @@ input[type="range"]:focus::-ms-fill-upper {
   width: 30%;
   margin-top: 5vh;
   margin-bottom: 5vh;
-  
-  border-radius: 5px;
+  border-radius: 0 5px 5px 0;
 }
 
 .contacts-header h1 {
@@ -633,8 +693,8 @@ input[type="range"]:focus::-ms-fill-upper {
   text-align: right;
   margin: 0;
   font-size: 1.9rem;
-  
-  border-radius: 5px;
+
+  border-radius: 0 5px 5px 0;
 }
 
 #map {
@@ -650,7 +710,7 @@ input[type="range"]:focus::-ms-fill-upper {
   justify-content: space-around;
   width: 100%;
   margin: 0 auto;
-  
+
   align-items: center;
   font-size: 1.5rem;
   vertical-align: top;
@@ -817,7 +877,6 @@ input[type="range"]:focus::-ms-fill-upper {
     position: relative;
     bottom: 0;
     background-color: rgb(0, 0, 0, 0.9);
-    
   }
   .carousel-caption p {
     font-size: 0.9rem;
@@ -915,7 +974,7 @@ input[type="range"]:focus::-ms-fill-upper {
 }
 
 @media screen and (max-width: 625px) {
-  .pos-f-t {
+  .pos-f-t, .modal-form {
     display: block;
     z-index: 99999999;
   }
@@ -928,7 +987,8 @@ input[type="range"]:focus::-ms-fill-upper {
   .gram,
   .contacts-mail,
   .contacts-addr,
-  .social-media {
+  .social-media,
+  .vkusno-header {
     display: none;
   }
   #hero-button {
@@ -974,6 +1034,12 @@ input[type="range"]:focus::-ms-fill-upper {
   .pos-f-t {
     display: none;
   }
+}
+
+
+.form-control,
+.modalSubm {
+  margin-top: 5px;
 }
 
 @media screen and (max-width: 890px) {
