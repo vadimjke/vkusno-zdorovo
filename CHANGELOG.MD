@@ -1,6 +1,9 @@
 # Changelog
 
 
+## [1.2.1] - 23-11-2020
+### Changed
+- Убрал package-lock из .gitignore
 
 ## [1.2] - 23-11-2020
 ### Changed

@@ -402,12 +402,3 @@ $('#knopka').click(function (event) {
       }
   });
 });
-
-
-
-
-/* Маска для телефона */
-var phoneMask = IMask(
-  document.getElementById('phone'), {
-    mask: '+{7}(000)000-00-00'
-  });
