@@ -1,7 +1,7 @@
 # vkusno-zdorovo
 Сайт компании "Вкусно!Здорово", которая занимается корпоративным питанием в г. Новороссийск
 
-Текущая версия: 1.2
-Последнее обновление: 23.11.2020
+Текущая версия: 1.3
+Последнее обновление: 30.11.2020
 
-- Изменения в версиях при разработке проекта указываются в **[CHANGELOG.md](https://github.com/vadimjke/vkusno-zdorovo/blob/master/CHANGELOG.md)**
+- Изменения в версиях при разработке проекта указываются в **[CHANGELOG.MD](https://github.com/vadimjke/vkusno-zdorovo/blob/master/CHANGELOG.MD)**
