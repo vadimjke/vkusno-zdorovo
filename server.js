@@ -26,6 +26,20 @@ const nodemailer = require("nodemailer");
 
 // Подключаем Монгуса
 const mongoose = require("mongoose");
+mongoose.Promise = global.Promise;
+const db = mongoose.connection;
+
+mongoose.connect(
+    "mongodb+srv://user:welcome88@cluster0.ofoab.mongodb.net/Cluster0?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }
+);
+
+db.on("error", console.error.bind(console, "connection error:"));
+db.once("open", function() {
+    // we're connected!
+    console.log("connected");
+});
+
+
 var Schema = mongoose.Schema;
 var VoteSchema = new Schema({
     name: { type: String },
@@ -84,16 +98,6 @@ app.post("/vote", (req, res) => {
         "mongodb+srv://user:welcome88@cluster0.ofoab.mongodb.net/Cluster0?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }
     );
 
-    mongoose.Promise = global.Promise;
-
-    const db = mongoose.connection;
-
-    db.on("error", console.error.bind(console, "connection error:"));
-    db.once("open", function() {
-        // we're connected!
-        console.log("connected");
-    });
-
     VoteModel.findOneAndUpdate({ name: req.body.vote }, { $inc: { votes: 1 } },
         function(err, response) {
             if (err) {
@@ -111,20 +115,6 @@ app.post("/vote", (req, res) => {
 });
 
 app.get("/vote/json", (req, res) => {
-    mongoose.connect(
-        "mongodb+srv://user:welcome88@cluster0.ofoab.mongodb.net/Cluster0?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }
-    );
-
-    mongoose.Promise = global.Promise;
-
-    const db = mongoose.connection;
-
-    db.on("error", console.error.bind(console, "connection error:"));
-    db.once("open", function() {
-        // we're connected!
-        console.log("connected");
-    });
-
     VoteModel.find({}, function(err, users) {
 
         if (err) return console.log(err);
