@@ -110,6 +110,28 @@ app.post("/vote", (req, res) => {
     });
 });
 
+app.get("/vote/json", (req, res) => {
+    mongoose.connect(
+        "mongodb+srv://user:welcome88@cluster0.ofoab.mongodb.net/Cluster0?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }
+    );
+
+    mongoose.Promise = global.Promise;
+
+    const db = mongoose.connection;
+
+    db.on("error", console.error.bind(console, "connection error:"));
+    db.once("open", function() {
+        // we're connected!
+        console.log("connected");
+    });
+
+    VoteModel.find({}, function(err, users) {
+
+        if (err) return console.log(err);
+        res.send(users)
+    });
+});
+
 app.get("/vote", (req, res) => {
     res.sendFile(path.join(__dirname + "/pub/votes.html"));
 });
