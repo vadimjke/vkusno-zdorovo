@@ -1,6 +1,6 @@
 $(document).ready(function() {
     var requestURL =
-        "https://vkusno-zdorovo.ru/vote/json";
+        "http://vkusno-zdorovo.ru/vote/json";
     var request = new XMLHttpRequest();
     request.open("GET", requestURL);
     request.responseType = "json";

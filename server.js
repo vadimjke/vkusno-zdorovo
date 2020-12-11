@@ -94,9 +94,6 @@ app.post("/send/", function(req, res) {
 
 // Отправить результаты в БД
 app.post("/vote", (req, res) => {
-    mongoose.connect(
-        "mongodb+srv://user:welcome88@cluster0.ofoab.mongodb.net/Cluster0?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }
-    );
 
     VoteModel.findOneAndUpdate({ name: req.body.vote }, { $inc: { votes: 1 } },
         function(err, response) {
