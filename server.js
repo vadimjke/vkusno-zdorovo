@@ -123,6 +123,10 @@ app.get("/vote", (req, res) => {
     res.sendFile(path.join(__dirname + "/pub/votes.html"));
 });
 
+app.get("/order", (req, res) => {
+    res.sendFile(path.join(__dirname + "/pub/order.html"));
+});
+
 app.get("/vote/results", (req, res) => {
     res.sendFile(path.join(__dirname + "/pub/stats.html"));
 });
