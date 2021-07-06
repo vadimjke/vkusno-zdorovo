@@ -2,56 +2,100 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вкусно!Здорово / Заказать обед</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вкусно!Здорово / Заказать обед</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 
 <body>
-    <iframe src="https://41078.smartomato.ru" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;">
-        Ваш браузер не поддерживает это приложение. Пожалуйста свяжитесь с нашим менеджером по телефону 8-928-256-42-43
-    </iframe>
+  <iframe src="https://41078.smartomato.ru"
+    style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;">
+    Ваш браузер не поддерживает это приложение. Пожалуйста свяжитесь с нашим менеджером по телефону 8-928-256-42-43
+  </iframe>
 
 
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
+  <!-- Early Modal -->
+  <div class="modal fade" id="earlyModal" tabindex="-1" role="dialog" aria-labelledby="earlyModalTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="myModalTitle">Тестовый режим</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <h5 class="modal-title" id="earlyModalTitle">Добрый день!</h5>
         </div>
         <div class="modal-body">
-            <p>Добрый день! Данный раздел находится в разработке и будет запущен в ближайшее время.</p>
-            <p>На данный момент Вы можете заказать обед по телефону:</p>
-                <span style="font-size: 1.5rem; margin: 0 auto; display: block; width: 50%;">8-928-256-42-43</span>
-            <br>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
-          
+          <p>Прием заказов на завтра еще не начался - он ведется с 10:00 до 15:00</p>
+
+          <div id="timer"></div>
         </div>
       </div>
     </div>
   </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
-    <!-- <script type="text/javascript">
-        $(window).on('load', function () {
-            $('#myModal').modal('show');
-        });
-    </script> -->
+  <!-- Late Modal -->
+  <div class="modal fade" id="lateModal" tabindex="-1" role="dialog" aria-labelledby="lateModalTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="LlteModalTitle">Добрый день!</h5>
+        </div>
+        <div class="modal-body">
+          <p>Мы работаем по предварительному заказу</p>
+          <br>
+          <p>Прием заказов ведется с 10:00 до 15:00</p>
+          <br>
+          <p>На сегодня прием заказов окончен</p>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+  <script type="text/javascript">$(window).on('load', function () {
+      var objDate = new Date();
+
+      // Создаем объект завтра (через сутки от сегодня)
+      var tomorrowObj = new Date(objDate.getTime() + 24 * 60 * 60 * 1000);
+
+      // Получаем число завтрашнего дня
+      var tommorowDayNumber = tomorrowObj.getDate();
+
+      // Получаем количество часов сейчас
+      var hoursNow = objDate.getHours();
+
+      // Текст день недели завтра
+      var tomorrowDayText = getWeekDay(tomorrowObj);
+      function getWeekDay(date) {
+        let days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+        return days[date.getDay()];
+      }
+
+      // Если сейчас менее 10 утра выводим одно окно
+      if (hoursNow < 10) {
+        $('#earlyModal').modal({ backdrop: 'static', keyboard: false });
+      }
+      // Если сейчас более 15 дня выводим другое окно
+      else if (hoursNow > 14) {
+        $('#lateModal').modal({ backdrop: 'static', keyboard: false });
+      }
+
+    });
+
+
+  </script>
 
 </body>
 

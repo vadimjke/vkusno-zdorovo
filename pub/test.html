@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        $(window).on('load', function () {
+            var objDate = new Date();
+
+            // Создаем объект завтра (через сутки от сегодня)
+            var tomorrowObj = new Date(objDate.getTime() + 24 * 60 * 60 * 1000);
+
+            // Получаем число завтрашнего дня
+            var tommorowDayNumber = tomorrowObj.getDate();
+
+            // Получаем количество часов сейчас
+            var hoursNow = objDate.getHours();
+
+            // Текст день недели завтра
+            var tomorrowDayText = getWeekDay(tomorrowObj);
+            function getWeekDay(date) {
+                let days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+                return days[date.getDay()];
+            }
+
+            // Если сейчас менее 10 утра выводим одно окно
+            if (hoursNow < 10) {
+                $('#earlyModal').modal('show');
+            }
+            // Если сейчас более 15 дня выводим другое окно
+            else if (horsNow >10 ) {
+                $('#lateModal').modal('show');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
